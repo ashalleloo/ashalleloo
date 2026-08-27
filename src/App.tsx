@@ -300,7 +300,7 @@ function SymptomsPage() {
 function AboutUsPage() {
   return (
     <PageTemplate
-      title="About Us"
+      title="About your mom"
       intro="Our mission is to educate others about the dangers of concussion and help break down the stigma surrounding brain injuries in sports."
       sections={[
         {
