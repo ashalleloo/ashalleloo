@@ -118,6 +118,8 @@ To add another card:
 3. Add a matching `Route`.
 4. Confirm the card link opens the intended page.
 
-## External Images
+## Image Assets
 
-The current cards and hero sections use remote Unsplash image URLs. That means images require an internet connection and could change or become unavailable. For a more reliable production site, download approved images into `src/assets/` or `public/`, check their usage rights, and update the image references.
+The About CTEs and Athlete Corner feature cards use local JPG files in `src/assets/`. They are imported at the top of `src/App.tsx` and assigned to the matching objects in `featureCards`. Keep the filenames exact, including spaces, when changing these imports.
+
+The other two feature cards, the home hero, and the mission visual still use remote Unsplash image URLs. Those remote images require an internet connection and could become unavailable. For a more reliable site, store approved images in `src/assets/` or `public/`, check their usage rights, and update the relevant references.

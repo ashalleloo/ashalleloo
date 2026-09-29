@@ -1,11 +1,15 @@
 import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom'
+import athleteCornerCover from './assets/Athlete Corner Cover page.jpg'
+import cteCover from './assets/CTE Cover apge.jpg'
 import './App.css'
 
 const navItems = [
   { label: 'Home', to: '/' },
+  { label: 'About Us', to: '/about-us' },
   { label: 'About Concussions', to: '/about-concussions' },
   { label: 'About CTEs', to: '/about-ctes' },
   { label: 'Athlete Corner', to: '/athlete-corner' },
+  { label: "Coach's Corner", to: '/responsibilities-for-coaches' },
   { label: 'More', to: '/more' },
 ]
 
@@ -15,8 +19,7 @@ const featureCards = [
     slug: 'What is a CTE?',
     description:
       'CTE stands for Chronic Traumatic Encephalopathy. A CTE is a type of injury associated with repeated head injuries.',
-    image:
-      'https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=900&q=80',
+    image: cteCover,
     to: '/about-ctes',
   },
   {
@@ -42,8 +45,7 @@ const featureCards = [
     slug: 'What can Athletes do?',
     description:
       'As an athlete your safety is your responsibility. When injury occurs with an athlete, many things are done to ensure proper recovery.',
-    image:
-      'https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=900&q=80',
+    image: athleteCornerCover,
     to: '/athlete-corner',
   },
 ]
@@ -169,20 +171,14 @@ function HomePage() {
         <section className="responsibility-block">
           <h2>Responsibilities for Parents &amp; Guardians</h2>
           <p>
-            Parents and guardians provide support before, during, and after a
-            suspected concussion. They should watch for changes in symptoms or
-            behaviour, communicate with the athlete and healthcare professionals, and
-            make sure the athlete follows the recommended recovery and return-to-activity plan.
+           Parents and guardians provide support before, during, and after a suspected concussion. They should watch for changes in symptoms or behaviour, communicate with the athlete and healthcare professionals, and make sure the athlete follows the recommended recovery and return-to-activity plan.
           </p>
         </section>
 
         <section className="responsibility-block secondary">
           <h2>Responsibilities for Coaches</h2>
           <p>
-            As a coach, safety is always a top priority for athletes. A concussion
-            can be an intimidating situation, but understanding how to recognize,
-            manage, and navigate concussions before and after they occur can make
-            dealing with concussions less challenging for everyone.
+           As a coach, safety is always a top priority for athletes. A concussion can be an intimidating situation, but understanding how to recognize, manage, and navigate concussions before and after they occur can make dealing with concussions less challenging for everyone.
           </p>
           <Link to="/responsibilities-for-coaches">Learn More</Link>
         </section>
@@ -318,14 +314,14 @@ function ResponsibilitiesForCoachesPage() {
         {
           heading: 'What Coaches Should Do',
           paragraphs: [
-            'Coaches should educate athletes and families about concussion signs, ensure appropriate safety practices, and encourage reporting symptoms immediately.',
-            'When a suspected concussion occurs, the athlete should be removed from play, monitored, and referred for medical evaluation before returning to action.',
+            'Coaches should ensure that athletes are educated about concussions. Many athletes lack knowledge about concussions, and it is rare for them to seek out this information on their own. Educating athletes about concussions helps them understand the potential risks and take steps to protect themselves. Furthermore, this breaks down the stigma around concussions and increases the likelihood of athletes seeking help if they are experiencing concussion-like symptoms.',
+            'Coaches should implement concussion protocols and baseline testing, as these measures can help with concussion recovery and prevention. Concussion protocols can help identify concussions in athletes, and they ensure a safe return to play. Baseline testing can help identify changes following concussions and support the recovery process. These measures increase safety for athletes by providing clarity during the recovery process. ',
           ],
         },
         {
           heading: 'Creating a Safe Environment',
           paragraphs: [
-            'A strong safety culture starts with clear communication, proper training, and a focus on recovery over pressure to return too soon. Coaches are critical in helping athletes prioritize health and long-term well-being.',
+            'A strong safety culture and a supportive environment among staff and athletes is very important to concussion safety. This environment allows athletes to feel comfortable and seek help when needed. It is also important to reassure athletes that seeking help for a concussion is the best thing to do. This discourages athletes from adopting a "macho mentality" and continuing to participate in their sport while suffering from a concussion.',
           ],
         },
       ]}

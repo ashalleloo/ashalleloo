@@ -61,6 +61,8 @@ The four cards come from `featureCards`:
 
 Each card has a title, short question, description, image URL, and destination. If you change a card's link, make sure the route exists.
 
+The About CTEs card uses `src/assets/CTE Cover apge.jpg`, and the Athlete Corner card uses `src/assets/Athlete Corner Cover page.jpg`. These local images are imported at the top of `src/App.tsx` and assigned to the matching card. The Symptoms and About Concussion card images still use remote Unsplash URLs.
+
 ## Editing Text
 
 Most text is written directly inside page components. To edit a paragraph:
