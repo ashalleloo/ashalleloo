@@ -21,7 +21,7 @@ const featureCards = [
   },
   {
     title: 'Symptoms',
-    slug: 'What are the Symtoms?',
+    slug: 'What are the Symptoms?',
     description:
       'There are many symptoms for concussions and these symptoms can vary depending on severity of the concussion.',
     image:
@@ -147,15 +147,7 @@ function HomePage() {
         <section className="danger-panel">
           <h2>Why are Concussion Dangerous?</h2>
           <p>
-            In most cases, a single concussion will not lead to permanent damage after
-            proper recovery. However, concussions are dangerous because of their
-            effects. Although it is rare for the symptoms of one concussion to be
-            severe enough to cause serious harm, concussions become more dangerous if
-            multiple are sustained in a short period of time or if an individual
-            experiences another concussion before fully recovering from the first.
-            Experiencing multiple concussions could cause more severe symptoms that may
-            pose a threat to one's health. Repeated concussions could lead to chronic
-            traumatic encephalopathy.
+            In most cases, a single concussion will not lead to permanent damage after proper recovery. However, concussions are dangerous because of their effects. Symptoms of a concussion can pose safety concerns for everyday tasks such as cooking or driving due to difficulty concentrating or other symptoms. Although it is rare for the symptoms of one concussion to be severe enough to cause serious harm, concussions become more dangerous if multiple are sustained in a short period of time or if an individual experiences another concussion before fully recovering from the first. Experiencing multiple concussions could cause more severe symptoms that may pose a threat to one's health. Repeated concussions could lead to chronic traumatic encephalopathy..
           </p>
 
           <div className="feature-grid" aria-label="Concussion education links">
@@ -175,7 +167,7 @@ function HomePage() {
         </section>
 
         <section className="responsibility-block">
-          <h2>Responsibilities for Parents &amp; Gurdians</h2>
+          <h2>Responsibilities for Parents &amp; Guardians</h2>
           <p>
             Parents and guardians provide support before, during, and after a
             suspected concussion. They should watch for changes in symptoms or
@@ -208,15 +200,7 @@ function AboutConcussionsPage() {
         {
           heading: 'What Is a Concussion?',
           paragraphs: [
-            'A concussion is a mild traumatic brain injury caused by a blow or jolt to the head or body. It can disrupt normal brain function and may affect thinking, memory, mood, and coordination.',
-            'Symptoms can appear immediately or take hours or even days to emerge. Common signs include headaches, dizziness, confusion, nausea, sensitivity to light, and difficulty concentrating.',
-          ],
-        },
-        {
-          heading: 'Why It Matters',
-          paragraphs: [
-            'Even a seemingly minor concussion deserves attention. Ignoring symptoms or returning to activity too soon can worsen recovery and increase the risk of additional injuries.',
-            'Proper rest, medical assessment, and gradual return-to-play or return-to-learning plans are important steps toward safe recovery.',
+            'A concussion is a type of traumatic brain injury that can be caused by events such as car accidents, sports injuries, or falls. Concussions occur when the brain experiences rapid acceleration and deceleration. When you hit your head, the brain moves within the cerebrospinal fluid that normally cushions and protects it. However, in the case of a concussion, this rapid movement causes the brain to shift and deform inside the cranium. As a result, the brain’s soft and flexible composition becomes stressed and damaged by contact with the firm cranium. When this happens, the brain tissue and nerves can stretch and become damaged. What makes concussions different from injuries such as a broken bone is that MRIs, X-rays, or CT scans are unable to diagnose them. Instead, concussions often present themselves through changes in behavior. ',
           ],
         },
       ]}
@@ -233,15 +217,14 @@ function AboutCTEsPage() {
         {
           heading: 'What Is CTE?',
           paragraphs: [
-            'Chronic Traumatic Encephalopathy is a brain disorder associated with repeated traumatic brain injuries. It is most commonly discussed in the context of contact sports and repeated blows to the head.',
-            'The condition can lead to long-term changes in thinking, mood, and behavior. Symptoms may include memory problems, mood swings, irritability, depression, and in severe cases, cognitive decline.',
+            'CTE stands for Chronic Traumatic Encephalopathy. CTE is a type of injury associated with repeated head injuries. It is linked to experiencing numerous concussions. When your brain is injured during a traumatic brain injury (TBI), abnormal tau protein can begin to build up in the brain. As a result of suffering from numerous concussions, excessive tau protein accumulates. This excess tau can form tangles that build up inside brain cells, disrupting their function and eventually causing the cells to die. CTE can cause changes in behavior and can lead to mental health illnesses like depression.  ',
           ],
         },
         {
           heading: 'Prevention and Awareness',
           paragraphs: [
-            'Raising awareness is critical. Recognizing symptoms early, seeking medical evaluation, and protecting athletes from repeated trauma can reduce risk and help prevent long-term damage.',
-            'Safe play, trained coaches, and informed families and athletes are key parts of prevention.',
+            'Recognizing symptoms early, seeking medical help, and following safe return-to-play protocols can help protect athletes from repeated trauma and reduce long-term risks. ',
+
           ],
         },
       ]}
@@ -282,14 +265,25 @@ function SymptomsPage() {
         {
           heading: 'Common Symptoms',
           paragraphs: [
-            'Symptoms of concussion may include headache, dizziness, nausea, trouble concentrating, blurry vision, fatigue, and feeling unusually sensitive to light or sound.',
-            'Some people also report changes in mood, irritability, sleep problems, or trouble remembering what happened before or after the injury.',
+            'There are many symptoms of concussions, and these symptoms can vary depending on the severity of the concussion. However, if someone is suspected to have sustained a concussion, it should not be taken lightly. Common symptoms of concussions include the following:',
+          'Confusion',
+          'Headaches',
+          'Dizziness',
+          'Nausea',
+          'Vomiting',
+          'Sensitivity to light or noise',
+          'Loss of memory',
+          'Difficulty concentrating',
+          'Irregular sleep patterns',
+          'Blurred vision or double vision',
+          'Mood changes or irritability',
+          'Imbalance or loss of coordination',
           ],
         },
         {
           heading: 'When to Seek Help',
           paragraphs: [
-            'If you or someone else has a possible concussion, it is important to stop activity and seek medical evaluation. A concussion should never be ignored, even if the person appears to be acting normally.',
+            'If someone is suspected to have concussions or displays symptoms, it is important to stop activity and seek medical evaluation. A concussion should be ignored, even if the person is acting normal.',
           ],
         },
       ]}
@@ -304,11 +298,9 @@ function AboutUsPage() {
       intro="Our mission is to educate others about the dangers of concussion and help break down the stigma surrounding brain injuries in sports."
       sections={[
         {
-          heading: 'Our Mission',
+          heading: 'Who are We?',
           paragraphs: [
-            'We believe education is the first step toward safer sports and healthier communities. By learning about concussion risks, athletes, parents, coaches, and guardians can make more informed decisions.',
-            'This education helps reduce stigma, improve recognition, and support recovery for anyone who has experienced a concussion.',
-            'Concussions can affect a person physically, mentally, and emotionally. Early recognition and informed care can make a major difference in recovery outcomes and long-term health.',
+            `Hi, my name is Ashalle, and I’m currently working on a project about concussions as part of the Quantum Leaps program at the Society for Canadian Women in Science and Technology (SCWIST). Through this project, I’m exploring the stigma around concussions and how that affects athletes. I love to play contact sports like rugby and box lacrosse. I noticed that in the sports that I play, there is a stigma around concussions. I often saw that my friends and teammates were poorly informed about concussions and that there was a stigma around concussions. I thought this was a terrible thing because my teammates and friends could put themselves in danger if they didn’t know the full effects of a concussion. When I got this opportunity to participate in Quantum Leaps, I decided that I wanted to do my project on concussions. I want this project to inform others about the dangers of concussions, but most of all, I want this project to help break down the stigma around concussions.`,
           ],
         },
        

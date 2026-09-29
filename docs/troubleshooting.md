@@ -46,6 +46,17 @@ ESLint found a code quality issue. Read the rule name and file location. Fix the
 
 Do not hide an error just to make the command pass unless you understand why the rule does not apply.
 
+### Unterminated String Literal
+
+JavaScript strings written with single quotes (`'text'`) or double quotes (`"text"`) cannot continue onto a new source line. If a paragraph needs to span multiple lines in the source, use a template literal with backticks:
+
+```tsx
+const paragraph = `This text can
+continue on another source line.`
+```
+
+Keep the text between the opening and closing backticks. Then run `npm run lint` and `npm run build` again.
+
 ## Images Do Not Load
 
 The website currently uses remote Unsplash URLs. Check your internet connection and confirm the URL is still valid. For stable production images, store approved image files in `src/assets/` or `public/`.

@@ -5,11 +5,11 @@
 | URL | Component | Purpose |
 |---|---|---|
 | `/` | `HomePage` | Main landing page and links to the educational sections |
-| `/about-concussions` | `AboutConcussionsPage` | Explains what a concussion is and why it matters |
+| `/about-concussions` | `AboutConcussionsPage` | Explains what a concussion is |
 | `/about-ctes` | `AboutCTEsPage` | Explains CTE and prevention awareness |
 | `/athlete-corner` | `AthleteCornerPage` | Gives athletes guidance on symptoms and returning to play |
 | `/symptoms` | `SymptomsPage` | Lists common symptoms and when to seek help |
-| `/about-us` | `AboutUsPage` | Explains the mission of the website |
+| `/about-us` | `AboutUsPage` | Shares the project author's background and reason for choosing concussion awareness |
 | `/responsibilities-for-coaches` | `ResponsibilitiesForCoachesPage` | Explains coach responsibilities and safety practices |
 | `/more` | `MorePage` | Provides additional resource context |
 
@@ -35,6 +35,18 @@ The home page contains:
 4. Four linked feature cards.
 5. Parent and guardian responsibilities.
 6. Coach responsibilities with a Learn More link.
+
+The parent heading uses the spelling **Guardians**, and the Symptoms feature card uses the spelling **Symptoms**.
+
+## Informational Page Content
+
+- **About Concussions** currently has a “What Is a Concussion?” section.
+- **About CTEs** has “What Is CTE?” and “Prevention and Awareness” sections.
+- **Athlete Corner** has guidance for athletes and a “Safe Return to Play” section.
+- **Symptoms** includes a short introduction, common symptoms, and a section about seeking help. The symptom entries are currently stored as strings in the `paragraphs` array and rendered as separate paragraphs by `PageTemplate`.
+- **About Us** introduces the site's mission and includes a first-person account of the author's project and motivation.
+- **Responsibilities for Coaches** covers coach actions and creating a safe environment.
+- **More Resources** summarizes the site's concussion education topics.
 
 ## Feature Cards
 
