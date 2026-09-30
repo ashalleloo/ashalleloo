@@ -237,14 +237,12 @@ function AthleteCornerPage() {
         {
           heading: 'What Can Athletes Do?',
           paragraphs: [
-            'Athletes should report symptoms early and never ignore signs such as dizziness, headaches, confusion, nausea, or feeling foggy. Being honest about how you feel is a sign of strength, not weakness.',
-            'If you suspect a concussion, remove yourself from play and seek medical guidance before returning to sport. Recovery should be gradual and supervised when needed.',
-          ],
-        },
-        {
-          heading: 'Safe Return to Play',
-          paragraphs: [
-            'A proper return-to-play plan includes rest, symptom monitoring, and a gradual return to physical activity only after medical clearance. Taking this step protects both your health and your long-term performance.',
+            'As an athlete, your safety is your responsibility. When an injury occurs with an athlete, many things are done to ensure proper recovery, but when it comes to a concussion, this is not always the case. The problem is that often concussions will go unreported. There are many factors that influence this, but the most prevalent factors are the following:',
+            'Athletes may not recognize the symptoms of a concussion',
+            'Athletes may not want to be removed from play',
+            'Athletes may not want to let down their team or coach',
+            'Athletes may not want to be seen as weak',
+            'Athletes may not be informed about the lont-term effects of concussions',
           ],
         },
       ]}
