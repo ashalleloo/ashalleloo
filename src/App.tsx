@@ -1,6 +1,8 @@
 import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom'
 import athleteCornerCover from './assets/Athlete Corner Cover page.jpg'
 import cteCover from './assets/CTE Cover apge.jpg'
+import footballCover from './assets/Football.jpg'
+import headshot from './assets/Headshot.jpg'
 import './App.css'
 
 const navItems = [
@@ -36,8 +38,7 @@ const featureCards = [
     slug: 'What is a Concussion?',
     description:
       'A concussion is a type of traumatic brain injury that can be caused by events such as car accidents, sports injuries, or falls.',
-    image:
-      'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=900&q=80',
+    image: footballCover,
     to: '/about-concussions',
   },
   {
@@ -80,11 +81,26 @@ function PageTemplate({
   title,
   intro,
   sections,
+  image,
 }: {
   title: string
   intro?: string
   sections: Array<{ heading: string; paragraphs: string[] }>
+  image?: { src: string; alt: string }
 }) {
+  const content = (
+    <>
+      {sections.map((section) => (
+        <section key={section.heading} className="info-section">
+          <h2>{section.heading}</h2>
+          {section.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </section>
+      ))}
+    </>
+  )
+
   return (
     <div className="page-shell">
       <SiteHeader />
@@ -96,14 +112,16 @@ function PageTemplate({
           {intro ? <p className="lead">{intro}</p> : null}
         </section>
 
-        {sections.map((section) => (
-          <section key={section.heading} className="info-section">
-            <h2>{section.heading}</h2>
-            {section.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </section>
-        ))}
+        {image ? (
+          <div className="about-us-layout">
+            <div className="about-us-copy">{content}</div>
+            <figure className="about-us-figure">
+              <img src={image.src} alt={image.alt} />
+            </figure>
+          </div>
+        ) : (
+          content
+        )}
       </main>
     </div>
   )
@@ -156,7 +174,11 @@ function HomePage() {
             {featureCards.map((card) => (
               <Link to={card.to} key={card.title} className="feature-card-link">
                 <article className="feature-card">
-                  <img src={card.image} alt={card.title} />
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className={card.title === 'About Concussion' ? 'feature-card-image football-card-image' : 'feature-card-image'}
+                  />
                   <div className="card-copy">
                     <h3>{card.title}</h3>
                     <h4>{card.slug}</h4>
@@ -290,6 +312,7 @@ function AboutUsPage() {
     <PageTemplate
       title="About Us"
       intro="Our mission is to educate others about the dangers of concussion and help break down the stigma surrounding brain injuries in sports."
+      image={{ src: headshot, alt: 'Ashalle headshot' }}
       sections={[
         {
           heading: 'Who are We?',
@@ -297,7 +320,6 @@ function AboutUsPage() {
             `Hi, my name is Ashalle, and I’m currently working on a project about concussions as part of the Quantum Leaps program at the Society for Canadian Women in Science and Technology (SCWIST). Through this project, I’m exploring the stigma around concussions and how that affects athletes. I love to play contact sports like rugby and box lacrosse. I noticed that in the sports that I play, there is a stigma around concussions. I often saw that my friends and teammates were poorly informed about concussions and that there was a stigma around concussions. I thought this was a terrible thing because my teammates and friends could put themselves in danger if they didn’t know the full effects of a concussion. When I got this opportunity to participate in Quantum Leaps, I decided that I wanted to do my project on concussions. I want this project to inform others about the dangers of concussions, but most of all, I want this project to help break down the stigma around concussions.`,
           ],
         },
-       
       ]}
     />
   )
