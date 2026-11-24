@@ -70,8 +70,11 @@ Open the address Vite prints in the terminal. This preview is useful because it 
 - `src/App.tsx` - page content, routes, navigation, and React components.
 - `src/App.css` - styles for the pages and components.
 - `src/index.css` - global styles used across the website.
+- `src/assets/` - local images used by the home cards and About Us page.
 - `package.json` - project dependencies and command shortcuts.
 - `public/` - static files that can be used by the website.
+
+The website uses local asset imports from `src/assets`. If Vite reports that an image cannot be resolved, confirm that the exact filename exists in that folder and that the spelling in `src/App.tsx` matches it exactly.
 
 ## GitHub Setup
 

@@ -42,11 +42,11 @@ The parent heading uses the spelling **Guardians**, and the Symptoms feature car
 
 - **About Concussions** currently has a “What Is a Concussion?” section.
 - **About CTEs** has “What Is CTE?” and “Prevention and Awareness” sections.
-- **Athlete Corner** has guidance for athletes and a “Safe Return to Play” section.
-- **Symptoms** includes a short introduction, common symptoms, and a section about seeking help. The symptom entries are currently stored as strings in the `paragraphs` array and rendered as separate paragraphs by `PageTemplate`.
-- **About Us** introduces the site's mission and includes a first-person account of the author's project and motivation.
+- **Athlete Corner** has guidance for athletes and a bulleted list explaining why concussions may go unreported.
+- **Symptoms** includes a short introduction, common symptoms, and a section about seeking help. The symptom entries are stored in the optional `bullets` array and rendered as a bulleted list by `PageTemplate`.
+- **About Us** introduces the site's mission and includes a first-person account of the author's project and motivation. It displays the local Grade 10 Photo and places the text beside the photo.
 - **Responsibilities for Coaches** covers coach actions and creating a safe environment.
-- **More Resources** summarizes the site's concussion education topics.
+- **More Resources** lists the site's article and medical sources. Photo-source links are not included.
 
 ## Feature Cards
 
@@ -59,9 +59,16 @@ The four cards come from `featureCards`:
 | About Concussion | `/about-concussions` |
 | Athlete Corner | `/athlete-corner` |
 
-Each card has a title, short question, description, image URL, and destination. If you change a card's link, make sure the route exists.
+Each card has a title, short question, description, local image import, and destination. If you change a card's link, make sure the route exists.
 
-The About CTEs card uses `src/assets/CTE Cover apge.jpg`, and the Athlete Corner card uses `src/assets/Athlete Corner Cover page.jpg`. These local images are imported at the top of `src/App.tsx` and assigned to the matching card. The Symptoms and About Concussion card images still use remote Unsplash URLs.
+The cards use these local assets:
+
+- About CTEs: `src/assets/CTE Cover apge.jpg`
+- Symptoms: `src/assets/Symptoms.jpg`
+- About Concussion: `src/assets/Football.jpg`
+- Athlete Corner: `src/assets/Athlete Corner Cover page.jpg`
+
+The hero and mission visual use `src/assets/hero.png`, and About Us uses `src/assets/Grade 10 Photo.jpg`. Import local assets at the top of `src/App.tsx` rather than linking to external image URLs.
 
 ## Editing Text
 
@@ -83,7 +90,12 @@ For informational pages, edit the `sections` array passed to `PageTemplate`. Kee
     'First paragraph.',
     'Second paragraph.',
   ],
+  bullets: [
+    'Optional bullet item.',
+  ],
 }
+
+`bullets` is optional. Omit it for normal informational sections.
 ```
 
 ## Adding A New Page

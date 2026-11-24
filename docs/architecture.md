@@ -70,13 +70,14 @@ If you add or remove a main navigation item, update the `navItems` array near th
 
 - `title`: the page heading
 - `intro`: the short introduction under the heading
-- `sections`: an array of section headings and paragraphs
+- `sections`: an array of section headings, paragraphs, and optional bullets
+- `image`: optional image data for pages that use a text-and-photo layout
 
 This is an example of a reusable component: change the template once and all pages using it can benefit.
 
 ### `HomePage`
 
-`HomePage` contains the visual landing page, mission section, educational cards, and responsibility sections. The cards are generated from the `featureCards` array instead of being written four separate times.
+`HomePage` contains the visual landing page, mission section, educational cards, and responsibility sections. The cards are generated from the `featureCards` array instead of being written four separate times. Card and hero images are imported from `src/assets` as local files.
 
 ### Page Components
 
@@ -120,6 +121,6 @@ To add another card:
 
 ## Image Assets
 
-The About CTEs and Athlete Corner feature cards use local JPG files in `src/assets/`. They are imported at the top of `src/App.tsx` and assigned to the matching objects in `featureCards`. Keep the filenames exact, including spaces, when changing these imports.
+All Home feature cards use local files in `src/assets/`. They are imported at the top of `src/App.tsx` and assigned to the matching objects in `featureCards`. Keep filenames exact, including spaces, when changing imports.
 
-The other two feature cards, the home hero, and the mission visual still use remote Unsplash image URLs. Those remote images require an internet connection and could become unavailable. For a more reliable site, store approved images in `src/assets/` or `public/`, check their usage rights, and update the relevant references.
+The current local assets include `hero.png`, `Football.jpg`, `Symptoms.jpg`, `Grade 10 Photo.jpg`, `CTE Cover apge.jpg`, and `Athlete Corner Cover page.jpg`. Keep approved originals in `src/assets/` and update the matching import and card reference together.

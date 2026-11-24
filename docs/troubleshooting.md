@@ -59,7 +59,7 @@ Keep the text between the opening and closing backticks. Then run `npm run lint`
 
 ## Images Do Not Load
 
-The website currently uses remote Unsplash URLs. Check your internet connection and confirm the URL is still valid. For stable production images, store approved image files in `src/assets/` or `public/`.
+Confirm the image exists in `src/assets/` and that `src/App.tsx` imports it with the exact filename and capitalization. Filenames containing spaces must be written inside the import string exactly as they appear on disk. Rebuild with `npm run build` after restoring or replacing an asset.
 
 ## A Link Goes To The Wrong Page
 

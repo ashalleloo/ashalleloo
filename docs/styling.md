@@ -20,9 +20,9 @@ The site uses a warm neutral background with a dark red accent.
 
 | Purpose | Color | Where it is used |
 |---|---|---|
-| Page background | `#f7f0ee` | `.page-shell` background |
-| Browser background | `#efefe9` | `body` background in `index.css` |
-| Root background | `#f3e5e5` | `:root` background in `index.css` |
+| Page background | `#fff` | `.page-shell` and `body` white background |
+| Browser background | `#fff` | `body` background in `index.css` |
+| Root background | `#fff` | `:root` background in `index.css` |
 | Main text | `#1b1f23` | `.page-shell` base text |
 | Dark text | `#171b1e` | Headings and body copy |
 | Primary red | `#b51c1c` | Large hero headline |
@@ -41,7 +41,7 @@ The color values are currently written directly in CSS rather than CSS custom pr
 
 ### Page Shell
 
-`.page-shell` limits the page to `1490px`, centers it, and provides the warm page background. It also has `min-height: 100vh` so short pages fill the screen.
+`.page-shell` limits the page to `1490px`, centers it, and provides a solid white page background. It also has `min-height: 100vh` so short pages fill the screen.
 
 ### Header
 

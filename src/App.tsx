@@ -2,7 +2,9 @@ import { BrowserRouter, Link, NavLink, Route, Routes } from 'react-router-dom'
 import athleteCornerCover from './assets/Athlete Corner Cover page.jpg'
 import cteCover from './assets/CTE Cover apge.jpg'
 import footballCover from './assets/Football.jpg'
-import headshot from './assets/Headshot.jpg'
+import symptomsCover from './assets/Symptoms.jpg'
+import heroImage from './assets/hero.png'
+import headshot from './assets/Grade 10 Photo.jpg'
 import './App.css'
 
 const navItems = [
@@ -10,6 +12,7 @@ const navItems = [
   { label: 'About Us', to: '/about-us' },
   { label: 'About Concussions', to: '/about-concussions' },
   { label: 'About CTEs', to: '/about-ctes' },
+  { label: 'Symptoms', to: '/symptoms' },
   { label: 'Athlete Corner', to: '/athlete-corner' },
   { label: "Coach's Corner", to: '/responsibilities-for-coaches' },
   { label: 'More', to: '/more' },
@@ -29,8 +32,7 @@ const featureCards = [
     slug: 'What are the Symptoms?',
     description:
       'There are many symptoms for concussions and these symptoms can vary depending on severity of the concussion.',
-    image:
-      'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=900&q=80',
+    image: symptomsCover,
     to: '/symptoms',
   },
   {
@@ -85,7 +87,7 @@ function PageTemplate({
 }: {
   title: string
   intro?: string
-  sections: Array<{ heading: string; paragraphs: string[] }>
+  sections: Array<{ heading: string; paragraphs: string[]; bullets?: string[] }>
   image?: { src: string; alt: string }
 }) {
   const content = (
@@ -96,6 +98,13 @@ function PageTemplate({
           {section.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          {section.bullets ? (
+            <ul className="reason-list">
+              {section.bullets.map((bullet) => (
+                <li key={bullet}>{bullet}</li>
+              ))}
+            </ul>
+          ) : null}
         </section>
       ))}
     </>
@@ -141,15 +150,13 @@ function HomePage() {
           </div>
 
           <div className="hero-image-wrap">
-            <img
-              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=900&q=80"
-              alt="Athlete training"
-            />
+            <img src={heroImage} alt="Athlete training" />
           </div>
         </section>
 
         <section className="mission-panel">
-          <div className="mission-visual" aria-hidden="true">
+          <div className="mission-visual">
+            <img src={heroImage} alt="Athlete preparing to train" />
             <div className="mission-badge">MISSION</div>
           </div>
 
@@ -260,11 +267,13 @@ function AthleteCornerPage() {
           heading: 'What Can Athletes Do?',
           paragraphs: [
             'As an athlete, your safety is your responsibility. When an injury occurs with an athlete, many things are done to ensure proper recovery, but when it comes to a concussion, this is not always the case. The problem is that often concussions will go unreported. There are many factors that influence this, but the most prevalent factors are the following:',
+          ],
+          bullets: [
             'Athletes may not recognize the symptoms of a concussion',
             'Athletes may not want to be removed from play',
             'Athletes may not want to let down their team or coach',
             'Athletes may not want to be seen as weak',
-            'Athletes may not be informed about the lont-term effects of concussions',
+            'Athletes may not be informed about the long-term effects of concussions',
           ],
         },
       ]}
@@ -282,18 +291,20 @@ function SymptomsPage() {
           heading: 'Common Symptoms',
           paragraphs: [
             'There are many symptoms of concussions, and these symptoms can vary depending on the severity of the concussion. However, if someone is suspected to have sustained a concussion, it should not be taken lightly. Common symptoms of concussions include the following:',
-          'Confusion',
-          'Headaches',
-          'Dizziness',
-          'Nausea',
-          'Vomiting',
-          'Sensitivity to light or noise',
-          'Loss of memory',
-          'Difficulty concentrating',
-          'Irregular sleep patterns',
-          'Blurred vision or double vision',
-          'Mood changes or irritability',
-          'Imbalance or loss of coordination',
+          ],
+          bullets: [
+            'Confusion',
+            'Headaches',
+            'Dizziness',
+            'Nausea',
+            'Vomiting',
+            'Sensitivity to light or noise',
+            'Loss of memory',
+            'Difficulty concentrating',
+            'Irregular sleep patterns',
+            'Blurred vision or double vision',
+            'Mood changes or irritability',
+            'Imbalance or loss of coordination',
           ],
         },
         {
@@ -356,10 +367,22 @@ function MorePage() {
       intro="Additional resources and information to help families, athletes, and coaches better understand concussion safety."
       sections={[
         {
-          heading: 'Learn More',
-          paragraphs: [
-            'This section brings together the key ideas behind concussion education: awareness, prevention, and safe recovery.',
-            'Visit the other pages to learn more about the risks of concussion, symptoms, athlete responsibilities, and coach guidance.',
+          heading: 'Sources',
+          paragraphs: [],
+          bullets: [
+            'Ainsley Dean, Philip John, et al. “Potential for Use of Creatine Supplementation Following Mild Traumatic Brain Injury.” Concussion, vol. 2, no. 2, Mar. 2017, p. CNC34. PubMed Central. https://doi.org/10.2217/cnc-2016-0016',
+            'Albayram, Onder, et al. “Function and Regulation of Tau Conformations in the Development and Treatment of Traumatic Brain Injury and Neurodegeneration.” Cell & Bioscience, vol. 6, no. 1, Dec. 2016, p. 59. Springer Link. https://doi.org/10.1186/s13578-016-0124-4',
+            'Collins, Christy L., et al. “Neck Strength: A Protective Factor Reducing Risk for Concussion in High School Sports.” The Journal of Primary Prevention, vol. 35, no. 5, Oct. 2014, pp. 309–19. Springer Link. https://doi.org/10.1007/s10935-014-0355-2',
+            '“Concussion.” AANS. https://www.aans.org/patients/conditions-treatments/concussion/. Accessed 30 Jan. 2026.',
+            '“How Long Does a Concussion Last?” Cleveland Clinic. https://my.clevelandclinic.org/health/diseases/15038-concussion. Accessed 30 Jan. 2026.',
+            'Jin, Xin, et al. “A Comprehensive Experimental Study on Material Properties of Human Brain Tissue.” Journal of Biomechanics, vol. 46, no. 16, Nov. 2013, pp. 2795–801. ScienceDirect. https://doi.org/10.1016/j.jbiomech.2013.09.001',
+            '———. “A Comprehensive Experimental Study on Material Properties of Human Brain Tissue.” Journal of Biomechanics, vol. 46, no. 16, Nov. 2013, pp. 2795–801. ScienceDirect. https://doi.org/10.1016/j.jbiomech.2013.09.001',
+            'Getty Images. (n.d.). Football American High School Search Results. Getty Images. Retrieved November 24, 2026, from https://www.gettyimages.ca/search/2/image?family=creative&phrase=football%20american%20highschool&sort=best&page=2&alloweduse=availableforalluses&excludenudity=true',
+            'Katsumoto, Atsuko, et al. “Tau Pathology in Chronic Traumatic Encephalopathy and Alzheimer’s Disease: Similarities and Differences.” Frontiers in Neurology, vol. 10, Sept. 2019. Frontiers. https://doi.org/10.3389/fneur.2019.00980',
+            'NickyLloyd. (2019, September 30). Coach monitoring the team practicing [Photograph]. Getty Images. https://www.gettyimages.ca/detail/photo/coach-monitoring-the-team-practicing-royalty-free-image/1177291146',
+            'Tommasone, Beth A., and Tamara C. Valovich McLeod. “Contact Sport Concussion Incidence.” Journal of Athletic Training, vol. 41, no. 4, 2006, pp. 470–72. PubMed Central. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1748409/',
+            '———. “Contact Sport Concussion Incidence.” Journal of Athletic Training, vol. 41, no. 4, 2006, pp. 470–72. PubMed Central. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1748409/',
+            'Turner, Ryan C., et al. “Alzheimer’s Disease and Chronic Traumatic Encephalopathy: Distinct but Possibly Overlapping Disease Entities.” Brain Injury, vol. 30, no. 11, Sept. 2016, pp. 1279–92. DOI.org (Crossref). https://doi.org/10.1080/02699052.2016.1193631',
           ],
         },
       ]}
